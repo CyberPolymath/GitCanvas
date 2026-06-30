@@ -18,7 +18,7 @@
 
 - [Why This Exists](#-why-this-exists)
 - [Prior Art & Landscape Research](#-prior-art--landscape-research)
-- [The Gap Nobody Has Filled](#-the-gap-nobody-has-filled)
+<!-- - [The Gap Nobody Has Filled](#-the-gap-nobody-has-filled) -->
 - [Features](#-features)
 - [How It Works](#-how-it-works)
 - [Tech Stack](#-tech-stack)
@@ -151,11 +151,10 @@ After surveying every tool in this space, a precise gap emerges:
 | Cross-platform (phone + laptop) | ❌ | ❌ | ❌ | ❌ | Partial | Partial | ❌ | ✅ |
 | No fake commits | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ |
 | Pattern-aware (not just streak) | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ |
-
-**No single tool combines: a real pattern designer + shade targeting + day-specific intelligent reminders + real-time GitHub sync + cross-platform push notifications + a commitment to real earned contributions.**
-
-CommitCanvas is built to be exactly that.
 -->
+**No single tool combines: a real pattern designer + shade targeting + day-specific intelligent reminders + real-time GitHub sync + cross-platform push notifications + a commitment to real earned contributions.**
+CommitCanvas is built to be exactly that.
+
 ---
 
 ##  Features
