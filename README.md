@@ -150,7 +150,7 @@ After surveying every tool in this space, a precise gap emerges:
 | Cross-platform (phone + laptop) | ❌ | ❌ | ❌ | ❌ | Partial | Partial | ❌ | ✅ |
 | No fake commits | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ |
 | Pattern-aware (not just streak) | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ |
--->
+--> Hence
 **No single tool combines: a real pattern designer + shade targeting + day-specific intelligent reminders + real-time GitHub sync + cross-platform push notifications + a commitment to real earned contributions.**
 CommitCanvas is built to be exactly that.
 
