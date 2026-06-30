@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🟩 CommitCanvas
+#  CommitCanvas
 
 ### Design Your GitHub Contribution Graph. Earn Every Square.
 
