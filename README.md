@@ -1,4 +1,4 @@
-# 🟩 Git Reminder — Draw Your GitHub Graph. Earn It For Real.
+# 🟩 G Reminder — Draw Your GitHub Graph. Earn It For Real.
 
 > A cross-platform Progressive Web App that lets you **visually design your GitHub contribution graph pattern**, then guides you day by day with smart reminders — so you actually *earn* every green square through real commits.
 
