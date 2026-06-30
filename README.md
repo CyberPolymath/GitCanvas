@@ -17,8 +17,7 @@
 ## 📌 Table of Contents
 
 - [Why This Exists](#-why-this-exists)
-- [Prior Art & Landscape Research](#-prior-art--landscape-research)
-<!-- - [The Gap Nobody Has Filled](#-the-gap-nobody-has-filled) -->
+- [Prior Art & Landscape Research](#-prior-art--landscape-research)<!-- - [The Gap Nobody Has Filled](#-the-gap-nobody-has-filled) -->
 - [Features](#-features)
 - [How It Works](#-how-it-works)
 - [Tech Stack](#-tech-stack)
