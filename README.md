@@ -6,7 +6,7 @@
 
 *A Progressive Web App that lets you plan custom pixel art or patterns on your GitHub contribution graph — then guides you day by day with smart reminders so you earn each green square through real commits.*
 
-![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+![License: INDIA](https://img.shields.io/badge/License-MIT-green.svg)
 ![Status: In Development](https://img.shields.io/badge/Status-In%20Development-yellow)
 ![Platform: PWA](https://img.shields.io/badge/Platform-PWA-blue)
 
@@ -31,7 +31,7 @@
 
 ---
 
-## 🧠 Why This Exists
+##  Why This Exists
 
 The GitHub contribution graph is one of the first things a recruiter, hiring manager, or collaborator notices on a developer's profile. A consistent, intentional pattern signals discipline, daily coding habits, and long-term commitment to the craft. Many developers are aware of this — and yet, maintaining a pattern across 52 weeks of a contribution grid is genuinely hard without a structured system.
 
@@ -40,13 +40,13 @@ There are two extremes in the current tooling landscape:
 1. **Fake it entirely** — scripts that push backdated commits automatically to manufacture a green graph. This is trivially detectable, dishonest, and provides zero actual coding practice.
 2. **No help at all** — GitHub itself provides no planning tools, no reminders, and no way to visualise a target pattern before committing to it.
 
-**CommitCanvas fills the empty space between these two extremes.** It is a tool for developers who want to design a real, intentional pattern on their contribution graph — and then actually earn it, one commit at a time, guided by smart daily reminders that tell them exactly what they need to do today.
+**GitCanvas fills the empty space between these two extremes.** It is a tool for developers who want to design a real, intentional pattern on their contribution graph — and then actually earn it, one commit at a time, guided by smart daily reminders that tell them exactly what they need to do today.
 
 No faking. No backdating. Just consistency, gamified and visualised.
 
 ---
 
-## 🔬 Prior Art & Landscape Research
+##  Prior Art & Landscape Research
 
 Before building CommitCanvas, an extensive survey of every existing tool, repository, website, and app in the GitHub contribution tracking space was conducted. The findings are documented below — not to dismiss existing work, but to precisely identify what each tool does well and where the gap remains.
 
@@ -136,7 +136,7 @@ Before building CommitCanvas, an extensive survey of every existing tool, reposi
 
 ---
 
-## 🎯 The Gap Nobody Has Filled
+##  The Gap Nobody Has Filled
 
 After surveying every tool in this space, a precise gap emerges:
 
@@ -158,41 +158,41 @@ CommitCanvas is built to be exactly that.
 
 ---
 
-## ✨ Features
+##  Features
 
-### 🎨 Visual Pattern Designer
+###  Visual Pattern Designer
 - An interactive grid mirroring the exact layout of GitHub's contribution graph (53 columns × 7 rows)
 - Click cells to toggle contributions on/off
 - Choose the shade of green for each cell — GitHub renders 4 intensity levels based on commit count thresholds
 - Draw freehand patterns, write your name, or import a preset pixel art design
 - Set a start date — the app maps your grid design to real calendar dates
 
-### 📅 Daily Contribution Scheduler
+###  Daily Contribution Scheduler
 - Calculates exactly how many contributions are needed on each calendar date based on your designed pattern
 - Generates a full day-by-day schedule from start date to end date
 - Accounts for GitHub's contribution intensity thresholds (1 commit = lightest, 9+ commits = darkest)
 - Recalculates dynamically if you miss or exceed a day's target
 
-### 🔔 Smart Daily Reminders
+###  Smart Daily Reminders
 - Set your preferred notification time
 - Push notifications on phone and desktop — even when the app is closed
 - Reminders are pattern-aware: *"Today you need 4 contributions to stay on pattern. You've done 1 so far. 3 left!"*
 - Morning reminder, optional midday check-in, and evening nudge if target unmet
 - Completion confirmation fires in real time the moment your daily target is reached
 
-### ⚡ Real-Time GitHub Sync via Webhooks
+###  Real-Time GitHub Sync via Webhooks
 - Connect via GitHub OAuth — no password stored
 - App registers webhooks on your chosen repos
 - Every commit you push anywhere triggers an instant update (within 1–3 seconds)
 - Progress dashboard reflects your actual contribution count in real time
 
-### 📊 Live Progress Dashboard
+###  Live Progress Dashboard
 - Today's count vs today's target
 - Overall pattern completion percentage
 - Side-by-side view: current graph vs target pattern
 - Streak tracking and missed-day alerts
 
-### 📱 Cross-Platform — Phone & Laptop Simultaneously
+###  Cross-Platform — Phone & Laptop Simultaneously
 - Built as a PWA — installable on Android, iOS, Windows, and Mac from the browser
 - Primary delivery on mobile (Android + iOS via Safari PWA)
 - Desktop notifications available for users without a phone
@@ -200,7 +200,7 @@ CommitCanvas is built to be exactly that.
 
 ---
 
-## 🔄 How It Works
+##  How It Works
 
 ```
 User designs a pattern on the interactive 53×7 contribution grid
@@ -227,7 +227,7 @@ Pattern fills up on GitHub, day by day, earned through real work
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 | Layer | Technology | Reason |
 |---|---|---|
@@ -241,7 +241,7 @@ Pattern fills up on GitHub, day by day, earned through real work
 
 ---
 
-## 📲 Notification System
+##  Notification System
 
 | Trigger | Message | Delivery |
 |---|---|---|
@@ -253,7 +253,7 @@ Pattern fills up on GitHub, day by day, earned through real work
 
 ---
 
-## 🔐 GitHub Integration Details
+##  GitHub Integration Details
 
 - **Authentication:** GitHub OAuth 2.0 — CommitCanvas never stores or sees your password
 - **Webhook scope:** Registers on repos you select (or all repos) to listen for `push` events
@@ -263,7 +263,7 @@ Pattern fills up on GitHub, day by day, earned through real work
 
 ---
 
-## 🗺 Roadmap
+##  Roadmap
 
 **Core (v1.0)**
 - [ ] Visual pattern designer with 4-shade intensity selection
@@ -284,7 +284,7 @@ Pattern fills up on GitHub, day by day, earned through real work
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 > ⚠️ Currently in early development. Full setup instructions will be added as the project stabilises.
 
