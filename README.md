@@ -6,12 +6,12 @@
 
 *A Progressive Web App that lets you plan custom pixel art or patterns on your GitHub contribution graph — then guides you day by day with smart reminders so you earn each green square through real commits.*
 
-![License: INDIA](https://img.shields.io/badge/License-INDIA-green.svg)
+![Copyright: All Rights Reserved](https://img.shields.io/badge/Copyright-All%20Rights%20Reserved-lightgrey)
 ![Status: In Development](https://img.shields.io/badge/Status-In%20Development-yellow)
 ![Platform: PWA](https://img.shields.io/badge/Platform-PWA-blue)
 
 </div>
-
+                                                 
 ---
 
 ## 📌 Table of Contents
@@ -40,7 +40,7 @@ There are two extremes in the current tooling landscape:
 1. **Fake it entirely** — scripts that push backdated commits automatically to manufacture a green graph. This is trivially detectable, dishonest, and provides zero actual coding practice.
 2. **No help at all** — GitHub itself provides no planning tools, no reminders, and no way to visualise a target pattern before committing to it.
 
-**GitCanvas fills the empty space between these two extremes.** It is a tool for developers who want to design a real, intentional pattern on their contribution graph — and then actually earn it, one commit at a time, guided by smart daily reminders that tell them exactly what they need to do today.
+**Git_Canvas fills the empty space between these two extremes.** It is a tool for developers who want to design a real, intentional pattern on their contribution graph — and then actually earn it, one commit at a time, guided by smart daily reminders that tell them exactly what they need to do today.
 
 No faking. No backdating. Just consistency, gamified and visualised.
 
@@ -48,7 +48,7 @@ No faking. No backdating. Just consistency, gamified and visualised.
 
 ##  Prior Art & Landscape Research
 
-Before building CommitCanvas, an extensive survey of every existing tool, repository, website, and app in the GitHub contribution tracking space was conducted. The findings are documented below — not to dismiss existing work, but to precisely identify what each tool does well and where the gap remains.
+Before building Git_Canvas, an extensive survey of every existing tool, repository, website, and app in the GitHub contribution tracking space was conducted. The findings are documented below — not to dismiss existing work, but to precisely identify what each tool does well and where the gap remains.
 
 ---
 
@@ -312,9 +312,19 @@ Contributions, ideas, and feature requests are welcome. If you've been looking f
 
 ---
 
-## 📄 License
+## 📄 Legal Notice
 
-MIT License — free to use, modify, and distribute.
+**Copyright**
+
+© 2026 Git_Canvas. All rights reserved.
+
+**License**
+
+Use, modification, and redistribution are permitted only with clear credit to the original project.
+
+**Terms of Service**
+
+Use of this site is subject to these terms. Do not remove attribution, misrepresent authorship, or redistribute the project without credit.
 
 ---
 
