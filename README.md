@@ -128,15 +128,15 @@ Before building Git_Canvas, an extensive survey of every existing tool, reposito
 
 **What it does:** A web interface where users can paint a pattern on a GitHub-style contribution grid, and the tool generates a shell script that, when run, pushes backdated commits to a repository to manufacture that pattern artificially.
 
-**Strengths:** The grid painting UI is the closest thing to the pattern designer in CommitCanvas. It demonstrates that users genuinely want to visualise and plan a target pattern on the grid — the demand is real.
+**Strengths:** The grid painting UI is the closest thing to the pattern designer in Git_Canvas. It demonstrates that users genuinely want to visualise and plan a target pattern on the grid — the demand is real.
 
-**What it lacks:** The entire execution layer is the opposite of what CommitCanvas stands for. The generated script creates fake backdated commits, which is immediately detectable by any interviewer who looks at commit timestamps. It provides zero real coding practice, undermines the credibility of the developer's profile, and defeats the entire purpose of the contribution graph. This is not a judgment on the tool's author — it's a recognition that the *UI concept* is right, but the *execution philosophy* is the inverse of what developers who want to genuinely build their profiles need.
+**What it lacks:** The entire execution layer is the opposite of what Git_Canvas stands for. The generated script creates fake backdated commits, which is immediately detectable by any interviewer who looks at commit timestamps. It provides zero real coding practice, undermines the credibility of the developer's profile, and defeats the entire purpose of the contribution graph. This is not a judgment on the tool's author — it's a recognition that the *UI concept* is right, but the *execution philosophy* is the inverse of what developers who want to genuinely build their profiles need.
 
 **Verdict:** Correct UI concept, wrong execution entirely. The inspiration for what CommitCanvas's grid designer should look like — without the backdating.
 
 ---
 
-##  The Gap Nobody Has Filled
+<!-- ##  The Gap Nobody Has Filled
 
 After surveying every tool in this space, a precise gap emerges:
 
@@ -155,7 +155,7 @@ After surveying every tool in this space, a precise gap emerges:
 **No single tool combines: a real pattern designer + shade targeting + day-specific intelligent reminders + real-time GitHub sync + cross-platform push notifications + a commitment to real earned contributions.**
 
 CommitCanvas is built to be exactly that.
-
+-->
 ---
 
 ##  Features
