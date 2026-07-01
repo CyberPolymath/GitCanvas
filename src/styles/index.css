@@ -1,0 +1,43 @@
+:root {
+	color-scheme: dark;
+	--bg: #0d1117;
+	--panel: #161b22;
+	--text: #e6edf3;
+	--muted: #8b949e;
+	--accent: #2f81f7;
+	--border: #30363d;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html, body, #root {
+	min-height: 100%;
+	margin: 0;
+}
+
+body {
+	background: var(--bg);
+	color: var(--text);
+	font-family: Inter, system-ui, sans-serif;
+}
+
+.page {
+	min-height: 100vh;
+	padding: 24px;
+}
+
+input, button {
+	font: inherit;
+}
+
+button {
+	cursor: pointer;
+}
+
+@media (max-width: 768px) {
+	.page {
+		padding: 16px;
+	}
+}

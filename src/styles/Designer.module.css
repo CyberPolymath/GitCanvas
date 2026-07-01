@@ -1,0 +1,29 @@
+.designer-layout {
+	display: grid;
+	grid-template-columns: 240px 1fr;
+	gap: 24px;
+}
+
+.designer-main {
+	display: grid;
+	gap: 16px;
+}
+
+.contribution-grid {
+	display: grid;
+	grid-template-columns: repeat(7, 18px);
+	gap: 6px;
+}
+
+.contribution-grid__cell {
+	width: 18px;
+	height: 18px;
+	border-radius: 4px;
+	background: #21262d;
+}
+
+@media (max-width: 768px) {
+	.designer-layout {
+		grid-template-columns: 1fr;
+	}
+}

@@ -1,0 +1,54 @@
+.page--auth {
+	display: grid;
+	place-items: center;
+}
+
+.auth-shell {
+	width: min(100%, 420px);
+	background: var(--panel);
+	border: 1px solid var(--border);
+	border-radius: 16px;
+	padding: 24px;
+}
+
+.auth-form,
+.social-auth {
+	display: grid;
+	gap: 12px;
+}
+
+.auth-form input,
+.auth-form button,
+.social-auth button {
+	min-height: 44px;
+}
+
+.tier-modal {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.72);
+	display: grid;
+	place-items: center;
+}
+
+.tier-modal__panel {
+	width: min(100%, 420px);
+	background: var(--panel);
+	border: 1px solid var(--border);
+	border-radius: 16px;
+	padding: 24px;
+	display: grid;
+	gap: 12px;
+}
+
+.toast,
+.success-message {
+	position: fixed;
+	top: 16px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: var(--accent);
+	color: white;
+	padding: 10px 16px;
+	border-radius: 999px;
+}
