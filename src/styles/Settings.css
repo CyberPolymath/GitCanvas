@@ -1,0 +1,16 @@
+.page--settings {
+	min-height: 100vh;
+}
+
+.settings-shell {
+	max-width: 960px;
+	margin: 0 auto;
+	background: var(--panel);
+	border: 1px solid var(--border);
+	border-radius: 16px;
+	padding: 24px;
+}
+
+.settings-shell h1 {
+	margin-top: 0;
+}

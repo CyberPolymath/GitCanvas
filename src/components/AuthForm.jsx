@@ -7,9 +7,17 @@ export default function AuthForm({ onSubmit }) {
 				onSubmit?.();
 			}}
 		>
-			<input type="text" placeholder="Email or phone number" />
-			<input type="password" placeholder="Password" />
-			<button type="submit">Continue</button>
+			<input 
+				type="email" 
+				placeholder="yourname@gmail.com"
+				required
+			/>
+			<input 
+				type="password" 
+				placeholder="Password"
+				required
+			/>
+			<button type="submit" className="auth-form__submit">Sign up</button>
 		</form>
 	);
 }

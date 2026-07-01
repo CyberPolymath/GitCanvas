@@ -1,5 +1,5 @@
 import Header from '../components/Header';
-import '../styles/Settings.module.css';
+import '../styles/Settings.css';
 
 export default function Settings() {
 	return (

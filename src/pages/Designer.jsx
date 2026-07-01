@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import TemplateList from '../components/TemplateList';
 import SuccessMessage from '../components/SuccessMessage';
-import '../styles/Designer.module.css';
+import '../styles/Designer.css';
 
 export default function Designer() {
 	const navigate = useNavigate();

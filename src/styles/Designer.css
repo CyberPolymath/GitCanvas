@@ -1,0 +1,33 @@
+.page--designer {
+	min-height: 100vh;
+}
+
+.designer-layout {
+	display: grid;
+	grid-template-columns: 240px 1fr;
+	gap: 24px;
+}
+
+.designer-main {
+	display: grid;
+	gap: 16px;
+}
+
+.app-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 16px 0;
+	border-bottom: 1px solid var(--border);
+	margin-bottom: 24px;
+}
+
+.app-header strong {
+	font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+	.designer-layout {
+		grid-template-columns: 1fr;
+	}
+}
