@@ -14,6 +14,9 @@ export default function LoginSignup() {
 		setShowTierModal(true);
 	};
 
+	const [authMode, setAuthMode] = useState('signup'); // 'signup' | 'signin'
+	const [authMethod, setAuthMethod] = useState('email'); // 'email' | 'phone'
+
 	const handleTierSelect = (tier) => {
 		setShowTierModal(false);
 		setMessage(`Selected ${tier} plan.`);
@@ -43,9 +46,31 @@ export default function LoginSignup() {
 				{/* Right form section */}
 				<section className="auth-form-section">
 					<div className="auth-card">
-						<h1 className="auth-card__title">SIGN IN</h1>
-						<p className="auth-card__subtitle">Sign in with email address</p>
-						<AuthForm onSubmit={handleAuthSubmit} />
+						<div className="auth-card__modes">
+							<button
+								className={`mode-btn ${authMode === 'signup' ? 'active' : ''}`}
+								onClick={() => setAuthMode('signup')}
+							>
+								Sign up
+							</button>
+							<button
+								className={`mode-btn ${authMode === 'signin' ? 'active' : ''}`}
+								onClick={() => setAuthMode('signin')}
+							>
+								Sign in
+							</button>
+						</div>
+
+						<h1 className="auth-card__title">{authMode === 'signup' ? 'Create account' : 'SIGN IN'}</h1>
+						<p className="auth-card__subtitle">{authMode === 'signup' ? 'Create a new account' : 'Sign in with your account'}</p>
+
+						{/* method selector */}
+						<div className="method-switch">
+							<button className={`method-btn ${authMethod === 'email' ? 'active' : ''}`} onClick={() => setAuthMethod('email')}>Email</button>
+							<button className={`method-btn ${authMethod === 'phone' ? 'active' : ''}`} onClick={() => setAuthMethod('phone')}>Phone</button>
+						</div>
+
+						<AuthForm mode={authMode} method={authMethod} onSubmit={handleAuthSubmit} />
 						<div className="auth-divider">Or continue with</div>
 						<SocialAuthButtons />
 						<p className="auth-card__footer">
