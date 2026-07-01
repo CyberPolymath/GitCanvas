@@ -379,27 +379,6 @@
 	color: white;
 }
 
-.method-switch {
-	display: flex;
-	gap: 8px;
-	justify-content: center;
-	margin-bottom: 16px;
-}
-
-.method-btn {
-	padding: 8px 12px;
-	background: rgba(13,17,23,0.6);
-	border: 1px solid var(--border);
-	color: var(--text);
-	border-radius: 8px;
-	cursor: pointer;
-}
-
-.method-btn.active {
-	background: rgba(99,102,241,0.15);
-	border-color: rgba(99,102,241,0.4);
-}
-
 .auth-error {
 	color: #ffb4b4;
 	background: rgba(255, 180, 180, 0.04);

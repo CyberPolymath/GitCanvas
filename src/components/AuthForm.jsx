@@ -1,9 +1,8 @@
 import { useState } from 'react';
-import { signUpWithEmail, signInWithEmail, signUpWithPhone, signInWithPhone } from '../services/authService';
+import { signUpWithEmail, signInWithEmail } from '../services/authService';
 
-export default function AuthForm({ mode = 'signup', method = 'email', onSubmit }) {
+export default function AuthForm({ mode = 'signup', onSubmit }) {
 	const [email, setEmail] = useState('');
-	const [phone, setPhone] = useState('');
 	const [password, setPassword] = useState('');
 	const [confirm, setConfirm] = useState('');
 	const [loading, setLoading] = useState(false);
@@ -14,23 +13,12 @@ export default function AuthForm({ mode = 'signup', method = 'email', onSubmit }
 		setError('');
 		setLoading(true);
 		try {
-			if (method === 'email') {
-				if (mode === 'signup') {
-					if (!email || !password || password !== confirm) throw new Error('Provide matching passwords');
-					await signUpWithEmail({ email, password });
-				} else {
-					if (!email || !password) throw new Error('Provide email and password');
-					await signInWithEmail({ email, password });
-				}
+			if (mode === 'signup') {
+				if (!email || !password || password !== confirm) throw new Error('Provide matching passwords');
+				await signUpWithEmail({ email, password });
 			} else {
-				// phone flow (placeholder)
-				if (mode === 'signup') {
-					if (!phone || !password) throw new Error('Provide phone and password');
-					await signUpWithPhone({ phone, password });
-				} else {
-					if (!phone || !password) throw new Error('Provide phone and password');
-					await signInWithPhone({ phone, password });
-				}
+				if (!email || !password) throw new Error('Provide email and password');
+				await signInWithEmail({ email, password });
 			}
 
 			onSubmit?.();
@@ -43,11 +31,7 @@ export default function AuthForm({ mode = 'signup', method = 'email', onSubmit }
 
 	return (
 		<form className="auth-form" onSubmit={handleSubmit}>
-			{method === 'email' ? (
-				<input type="email" placeholder="yourname@gmail.com" value={email} onChange={(e) => setEmail(e.target.value)} required />
-			) : (
-				<input type="tel" placeholder="+1 555 555 5555" value={phone} onChange={(e) => setPhone(e.target.value)} required />
-			)}
+			<input type="email" placeholder="yourname@gmail.com" value={email} onChange={(e) => setEmail(e.target.value)} required />
 
 			<input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
 
