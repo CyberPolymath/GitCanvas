@@ -2,7 +2,7 @@
 
 #  Git_Canvas
 
-### Design Your GitHub Contribution Graph. Earn Every Square.
+### Design Your GitHub Contribution Graph. Earn Every Square Yourself.
 
 *A Progressive Web App that lets you plan custom pixel art or patterns on your GitHub contribution graph — then guides you day by day with smart reminders so you earn each green square through real commits.*
 
