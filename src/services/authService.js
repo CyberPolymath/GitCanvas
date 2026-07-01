@@ -1,18 +1,41 @@
-export async function signIn() {
-	return { ok: true };
-}
+import { supabase } from '../lib/supabaseClient';
 
-// Placeholder auth methods. Replace with Supabase or your backend calls.
 export async function signUpWithEmail({ email, password }) {
-	// In production, call Supabase Auth or your backend which will:
-	// - hash the password using bcrypt (or the provider's secure method)
-	// - store only the hashed password and user metadata
-	// Example (Supabase): supabase.auth.signUp({ email, password })
-	return { ok: true };
+	const redirectTo = `${window.location.origin}/`;
+	const { data, error } = await supabase.auth.signUp({
+		email,
+		password,
+		options: { emailRedirectTo: redirectTo }
+	});
+
+	if (error) throw error;
+
+	return {
+		user: data.user,
+		session: data.session,
+		verificationRequired: !data.session
+	};
 }
 
 export async function signInWithEmail({ email, password }) {
-	// In production, call Supabase Auth signIn which will verify password server-side
-	// Example: supabase.auth.signInWithPassword({ email, password })
-	return { ok: true };
+	const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+	if (error) throw error;
+	return data;
+}
+
+export async function getCurrentSession() {
+	const { data, error } = await supabase.auth.getSession();
+	if (error) throw error;
+	return data.session;
+}
+
+export async function resendSignupVerification(email) {
+	const { data, error } = await supabase.auth.resend({
+		type: 'signup',
+		email,
+		options: { emailRedirectTo: `${window.location.origin}/` }
+	});
+
+	if (error) throw error;
+	return data;
 }

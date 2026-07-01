@@ -3,14 +3,23 @@ import { useNavigate } from 'react-router-dom';
 import AuthForm from '../components/AuthForm';
 import SocialAuthButtons from '../components/SocialAuthButtons';
 import TierModal from '../components/TierModal';
+import { resendSignupVerification } from '../services/authService';
 import '../styles/LoginSignup.css';
 
 export default function LoginSignup() {
 	const navigate = useNavigate();
 	const [showTierModal, setShowTierModal] = useState(false);
 	const [message, setMessage] = useState('');
+	const [verificationEmail, setVerificationEmail] = useState('');
 
-	const handleAuthSubmit = () => {
+	const handleAuthSubmit = ({ mode, email, verificationRequired }) => {
+		if (mode === 'signup' && verificationRequired) {
+			setVerificationEmail(email);
+			setMessage('Verification email sent. Please confirm your email before signing in.');
+			return;
+		}
+
+		setMessage('Signed in successfully.');
 		setShowTierModal(true);
 	};
 
@@ -20,6 +29,16 @@ export default function LoginSignup() {
 		setShowTierModal(false);
 		setMessage(`Selected ${tier} plan.`);
 		setTimeout(() => navigate('/designer'), 900);
+	};
+
+	const handleResendVerification = async () => {
+		if (!verificationEmail) return;
+		try {
+			await resendSignupVerification(verificationEmail);
+			setMessage('Verification email resent. Please check your inbox.');
+		} catch (err) {
+			setMessage(err.message || 'Could not resend verification email.');
+		}
 	};
 
 	return (
@@ -64,6 +83,14 @@ export default function LoginSignup() {
 						<p className="auth-card__subtitle">{authMode === 'signup' ? 'Create a new account' : 'Sign in with your account'}</p>
 
 						<AuthForm mode={authMode} onSubmit={handleAuthSubmit} />
+						{verificationEmail ? (
+							<div className="verification-box">
+								<p>Verification pending for <strong>{verificationEmail}</strong>.</p>
+								<button type="button" className="verification-btn" onClick={handleResendVerification}>
+									Resend verification email
+								</button>
+							</div>
+						) : null}
 						<div className="auth-divider">Or continue with</div>
 						<SocialAuthButtons />
 						<p className="auth-card__footer">

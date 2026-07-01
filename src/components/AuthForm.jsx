@@ -15,13 +15,17 @@ export default function AuthForm({ mode = 'signup', onSubmit }) {
 		try {
 			if (mode === 'signup') {
 				if (!email || !password || password !== confirm) throw new Error('Provide matching passwords');
-				await signUpWithEmail({ email, password });
+				const result = await signUpWithEmail({ email, password });
+				onSubmit?.({
+					mode,
+					email,
+					verificationRequired: result.verificationRequired
+				});
 			} else {
 				if (!email || !password) throw new Error('Provide email and password');
 				await signInWithEmail({ email, password });
+				onSubmit?.({ mode, email, verificationRequired: false });
 			}
-
-			onSubmit?.();
 		} catch (err) {
 			setError(err.message || 'Auth error');
 		} finally {

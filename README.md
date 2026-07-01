@@ -212,7 +212,7 @@ CommitCanvas is built to be exactly that.
 - All data syncs across devices in real time via cloud database
 
 ---
-
+<!-- 
 ##  How It Works
 
 ```
@@ -319,6 +319,7 @@ npm run dev
 
 ---
 
+-->
 ## 🤝 Contributing
 
 Contributions, ideas, and feature requests are welcome. If you've been looking for exactly this kind of tool, open an issue describing what you'd want — or submit a pull request.
