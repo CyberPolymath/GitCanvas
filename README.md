@@ -132,8 +132,23 @@ Before building Git_Canvas, an extensive survey of every existing tool, reposito
 **What it lacks:** The entire execution layer is the opposite of what Git_Canvas stands for. The generated script creates fake backdated commits, which is immediately detectable by any interviewer who looks at commit timestamps. It provides zero real coding practice, undermines the credibility of the developer's profile, and defeats the entire purpose of the contribution graph. This is not a judgment on the tool's author — it's a recognition that the *UI concept* is right, but the *execution philosophy* is the inverse of what developers who want to genuinely build their profiles need.
 
 **Verdict:** Correct UI concept, wrong execution entirely. The inspiration for what CommitCanvas's grid designer should look like — without the backdating.
+<!-- 
+---
+
+### 7. `https://github.com/spideydotjs/hackgit` — fake Contribution Painter / Script Generator
+
+**What it does:** A polished, interactive web app built in TypeScript that lets users design contribution graph patterns through a full-featured grid editor — supporting freehand drawing, text rendering (up to 15 characters), preset shapes (Invader, Smiley), brush intensity levels, erase/cycle modes, Conway's Game of Life simulation on the grid, and JSON import/export of patterns. Once designed, it applies the pattern to a real GitHub account via four methods: direct GitHub Push using a PAT token (auto-creates a repo and pushes backdated commits), Local Apply (creates backdated commits in a local repo), Export as Bash/PowerShell scripts, or JSON template sharing. Under the hood it explicitly overrides GIT_AUTHOR_DATE and GIT_COMMITTER_DATE to backdate every commit.
+
+**Strengths:** By far the most feature-complete grid designer found in this space. The brush tools, text drawer, shade intensity controls, and preset shapes are genuinely well-thought-out. The four-tab action panel shows serious product thinking. This is the closest existing tool to CommitCanvas's pattern designer in terms of UI sophistication.
+
+**What it lacks:** Everything after the design step is built on backdated fake commits — the entire execution philosophy is the opposite of Git_Canvas. There are no reminders, no real commit tracking, no GitHub webhook sync, no day-specific targets, and no phone notifications. The tool does the work for you dishonestly, rather than guiding you to do the work yourself honestly. An interviewer inspecting commit timestamps would immediately identify the pattern as manufactured.
+
+**Verdict:** The most advanced fake-commit tool in the space, and the strongest proof that developers deeply want a visual pattern designer — but it solves the wrong problem entirely. CommitCanvas takes the UI ambition of hackgit and rebuilds the execution layer around real earned contributions.
+
+-->
 
 ---
+
 
 <!-- ##  The Gap Nobody Has Filled
 
