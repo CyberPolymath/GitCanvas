@@ -1,9 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import ContributionGrid from '../components/ContributionGrid';
 import Header from '../components/Header';
-import Sidebar from '../components/Sidebar';
 import TemplateList from '../components/TemplateList';
-import SuccessMessage from '../components/SuccessMessage';
 import '../styles/Designer.css';
 
 export default function Designer() {
@@ -12,15 +10,20 @@ export default function Designer() {
 	return (
 		<main className="page page--designer">
 			<Header onSettings={() => navigate('/settings')} />
-			<div className="designer-layout">
-				<Sidebar />
-				<section className="designer-main">
+			<section className="designer-main">
+				<div className="designer-header">
 					<h1>Designer</h1>
-					<SuccessMessage text="Plan added successfully." />
-					<ContributionGrid />
-					<TemplateList tier="free" />
-				</section>
-			</div>
+					<p className="designer-main__description">
+						Click any square to grow its green level, just like a GitHub contribution graph.
+					</p>
+				</div>
+				<ContributionGrid />
+				<TemplateList tier="free" />
+				<div className="designer-footer">
+					<button type="button" className="designer-footer__btn">View Templates</button>
+					<button type="button" className="designer-footer__btn">Save Pattern</button>
+				</div>
+			</section>
 		</main>
 	);
 }
