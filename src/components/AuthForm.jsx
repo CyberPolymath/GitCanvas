@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { signUpWithEmail, signInWithEmail } from '../services/authService';
-import SocialAuthButtons from './SocialAuthButtons';
 
 export default function AuthForm({ mode = 'signup', onSubmit }) {
   const [email, setEmail] = useState('');
@@ -33,45 +32,34 @@ export default function AuthForm({ mode = 'signup', onSubmit }) {
   };
 
   return (
-    <div className="auth-form-wrapper">
-
-      <SocialAuthButtons />
-
-      <div className="auth-divider">
-        <span>or continue with email</span>
-      </div>
-
-      <form className="auth-form" onSubmit={handleSubmit}>
-        <input
-          type="email"
-          placeholder="yourname@gmail.com"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
+    <form className="auth-form" onSubmit={handleSubmit}>
+      <input
+        type="email"
+        placeholder="yourname@gmail.com"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        required
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        required
+      />
+      {mode === 'signup' && (
         <input
           type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Confirm password"
+          value={confirm}
+          onChange={(e) => setConfirm(e.target.value)}
           required
         />
-        {mode === 'signup' && (
-          <input
-            type="password"
-            placeholder="Confirm password"
-            value={confirm}
-            onChange={(e) => setConfirm(e.target.value)}
-            required
-          />
-        )}
-
-        {error && <div className="auth-error">{error}</div>}
-
-        <button type="submit" className="auth-form__submit" disabled={loading}>
-          {loading ? 'Please wait...' : mode === 'signup' ? 'Create account' : 'Sign in'}
-        </button>
-      </form>
-    </div>
+      )}
+      {error && <div className="auth-error">{error}</div>}
+      <button type="submit" className="auth-form__submit" disabled={loading}>
+        {loading ? 'Please wait...' : mode === 'signup' ? 'Create account' : 'Sign in'}
+      </button>
+    </form>
   );
 }
