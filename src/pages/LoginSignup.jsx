@@ -21,6 +21,7 @@ export default function LoginSignup() {
 
 		setMessage('Signed in successfully.');
 		setShowTierModal(true);
+		setTimeout(() => setMessage(''), 3000);
 	};
 
 	const [authMode, setAuthMode] = useState('signup'); // 'signup' | 'signin'
