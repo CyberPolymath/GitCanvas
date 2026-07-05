@@ -42,7 +42,7 @@ export default function TierModal({ onSelect }) {
               <h3 className={styles.tierName}>Mid</h3>
               <p className={styles.tagline}>Stay consistent</p>
               <div className={styles.price}>
-                <span className={styles.amount}>₹49</span>
+                <span className={styles.amount}>₹39</span>
                 <span className={styles.period}> / month</span>
               </div>
               <button
@@ -68,7 +68,7 @@ export default function TierModal({ onSelect }) {
               <h3 className={styles.tierName}>High</h3>
               <p className={styles.tagline}>Never miss a day</p>
               <div className={styles.price}>
-                <span className={styles.amount}>₹99</span>
+                <span className={styles.amount}>₹79</span>
                 <span className={styles.period}> / month</span>
               </div>
               <button
