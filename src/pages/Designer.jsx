@@ -48,19 +48,6 @@ export default function Designer() {
   return (
     <main className={`page page--designer ${showUsernameModal ? 'is-blurred' : ''}`}>
 
-      {/* Private contributions notice banner */}
-      <div className="designer-notice-banner">
-        <span>⚠️</span>
-        <span>
-          To display all your contributions including private ones, make sure
-          
-            <a href="https://github.com/settings/profile"
-            target="_blank"
-            rel="noreferrer"
-          > Private Contributions is enabled in your GitHub Settings</a>.
-        </span>
-      </div>
-
       <Header onSettings={() => navigate('/settings')} />
 
       <section className="designer-main">
