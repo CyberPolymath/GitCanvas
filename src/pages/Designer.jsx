@@ -62,10 +62,11 @@ export default function Designer() {
 
         <TemplateList tier="free" />
 
+        {/* these lines are commented cause we already implemented the save pattern and clear patterns inside the contribution grid card, it was no needed to showcase again at the very bottom, but their css classes are not commented and as is it their in the designer.css or whatever files
         <div className="designer-footer">
           <button type="button" className="designer-footer__btn">View Templates</button>
           <button type="button" className="designer-footer__btn">Save Pattern</button>
-        </div>
+        </div> */}
       </section>
 
       {/* Username modal */}
