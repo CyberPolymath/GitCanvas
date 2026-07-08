@@ -1,5 +1,5 @@
 const templatesByTier = {
-	free: ['Starter Wave', 'Mini Pixel'],
+	free: ['Will be added soon'],
 	mid: ['Starter Wave', 'Mini Pixel', 'Diagonal Flow'],
 	high: ['Starter Wave', 'Mini Pixel', 'Diagonal Flow', 'Full Canvas']
 };
