@@ -145,6 +145,10 @@ Before building Git_Canvas, an extensive survey of every existing tool, reposito
 
 **Verdict:** The most advanced fake-commit tool in the space, and the strongest proof that developers deeply want a visual pattern designer — but it solves the wrong problem entirely. CommitCanvas takes the UI ambition of hackgit and rebuilds the execution layer around real earned contributions.
 
+---
+
+### 8. `https://www.gitskins.com/pricing` — check this site to improve my github profile
+
 -->
 
 ---
